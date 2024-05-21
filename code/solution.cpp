@@ -12,7 +12,6 @@ void updateEnemyPowerList(vector<int> &enemyPowerList)
     // enemyPowerList[7] = enemyPowerList[7] + enemyPowerList[6]/2
 
     enemyPowerList[regenerateEnemyIndex1] = enemyPowerList[regenerateEnemyIndex1] + enemyPowerList[regenerateEnemyIndex1-1]/2;
-
     enemyPowerList[regenerateEnemyIndex2] = enemyPowerList[regenerateEnemyIndex2] + enemyPowerList[regenerateEnemyIndex2-1]/2;
 
     return;
@@ -49,7 +48,6 @@ bool checkAbhimanyuCanCross(vector<int> &enemyPowerList, int totalNumberOfSkips,
     for(int i = 0; i<totalNumberOfEnemies; i++)
     {
         int currEnemyPower = enemyPowerList[i];
-
         if(currRemainingPower >= currEnemyPower)
         {
             /* then abhimanyu can pass this circle */
@@ -71,8 +69,6 @@ bool checkAbhimanyuCanCross(vector<int> &enemyPowerList, int totalNumberOfSkips,
         {
             /*this means that he is not able to pass the circle even after recharging hence skipping is the way*/
             totalNumberOfSkips = totalNumberOfSkips - 1;
-
-            /*no change in current remaining power*/
         }
         else
         {
